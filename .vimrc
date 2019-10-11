@@ -1,6 +1,7 @@
 source ~/.vundle.vim
 source ~/.cscope_maps.vim
 source ~/.taglist.vim
+source ~/.srcexpl.vim
 
 set number
 hi Search ctermbg=red

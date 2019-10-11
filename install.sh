@@ -9,5 +9,7 @@ else
 	mkdir -p $HOME/.vim/bundle/
 git clone https://github.com/VundleVim/Vundle.vim.git $VIM_DIR/bundle/Vundle.vim
 fi
+# install all plugin in list .vundle.vim
+vim +PluginInstall +qall
 
 

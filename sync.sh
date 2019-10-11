@@ -10,7 +10,7 @@ clonning()
 	cp .cscope_maps.vim ~/
 	cp .vundle.vim ~/
 	cp .taglist.vim ~/
-
+	cp .srcexpl.vim ~/
 }
 pushing()
 {
@@ -19,10 +19,10 @@ pushing()
 	cp ~/.tmux.conf .
  	cp ~/.vimrc .
 
-	cp ~/ .cscope_maps.vim 
-	cp ~/ .vundle.vim
-	cp  ~/ .taglist.vim
-
+	cp ~/.cscope_maps.vim .
+	cp ~/.vundle.vim .
+	cp  ~/.taglist.vim .
+	cp  ~/.srcexpl.vim .
 }
 
 echo "clone from repo(c) or push to repo(p)"
