@@ -22,9 +22,16 @@ if [ ! -f "$BASH_RC_DIR" ]; then
 	echo "file $BASH_RC_DIR is not exist"
 else 
 
-	echo "update startup script for tmux in .bashrc"
-	cat .auto_startup_tmux.conf >> $BASH_RC_DIR
+	echo "checking .bashrc .... "
+	if [  -z "$TMUX_AUTO_STARTUP" ]; then 
+		cat .auto_startup_tmux.conf >> $BASH_RC_DIR
+		echo "$BASH_RC_DIR is updated"
+	else
+		echo "don't need update $BASH_RC_DIR"
+	fi
 fi
 
 # install all plugin in list .vundle.vim
+echo "checking plugin update ..."
 vim +PluginInstall +qall
+echo "update done"

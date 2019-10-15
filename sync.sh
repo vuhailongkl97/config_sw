@@ -4,25 +4,25 @@ clonning()
 {
 	echo "clonning"
 
-	cp .tmux.conf ~/
-	cp .vimrc ~/
+	cp -v .tmux.conf ~/
+	cp -v .vimrc ~/
 
-	cp .cscope_maps.vim ~/
-	cp .vundle.vim ~/
-	cp .taglist.vim ~/
-	cp .srcexpl.vim ~/
+	cp -v .cscope_maps.vim ~/
+	cp -v .vundle.vim ~/
+	cp -v .taglist.vim ~/
+	cp -v .srcexpl.vim ~/
 }
 pushing()
 {
 	echo "pussing"
 
-	cp ~/.tmux.conf .
- 	cp ~/.vimrc .
+	cp -v  ~/.tmux.conf .
+ 	cp -v  ~/.vimrc .
 
-	cp ~/.cscope_maps.vim .
-	cp ~/.vundle.vim .
-	cp  ~/.taglist.vim .
-	cp  ~/.srcexpl.vim .
+	cp -v ~/.cscope_maps.vim .
+	cp -v ~/.vundle.vim .
+	cp -v ~/.taglist.vim .
+	cp -v  ~/.srcexpl.vim .
 }
 
 echo "clone from repo(c) or push to repo(p)"
