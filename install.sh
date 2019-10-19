@@ -18,6 +18,21 @@ if [ -z "$(which xclip)" ]; then
 	sudo apt-get install -y xclip
 fi
 
+if [ -z "$(which tmux)" ]; then 
+	echo "installing tmux  for multiplexing"
+	sudo apt-get install -y tmux 
+fi
+
+if [ -z "$(which ctags)" ]; then 
+	echo "installing ctags for vim' plugin"
+	sudo apt-get install -y ctags 
+fi
+
+if [ -z "$(which cscope)" ]; then 
+	echo "installing cscope for vim' plugin"
+	sudo apt-get install -y  cscope 
+fi
+
 if [ ! -f "$BASH_RC_DIR" ]; then 
 	echo "file $BASH_RC_DIR is not exist"
 else 
