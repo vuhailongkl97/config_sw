@@ -1,3 +1,65 @@
 save config file for utilitis in linux 
 
-tmux ,vim
+tmux ,vim, cscope ,ctags,
+
+script auto install some plugin for vim : SrcExplore , Nerdtree, Tag list
+
+
+How to install ? 
+
+run ./install.sh
+
+what do "install.sh" do? 
+
++ process
+
+1. install Vundle.vim.git
+2. install 3 plugin : SrcExplore, Nerdtree, Tag list . update in ".vundle.vim"
+3. install xclip, tmux , ctags, cscope . it one have installed 
+4. update bashrc for tmux startup when we open terminal
+5. update plugin with Vundle plugin
+ 
+
++update rc file ? 
+1 update ~/.bashrc, ~/.vundle.vim, .cscope_maps.vim, .taglist.vim, .tmux.vim
+.srcexple.vim
+
+some important shortcuts :
+
+<C-a> |  split  vertical
+<C-a> -  split  horizontal 
+<C-a> c  create new window 
+<C-a> d  detach this session 
+<C-a> q  show pain number in tmux 
+<C-a> w  show all windows in tmux 
+<C-a> ESC  tmux switch to visual mode, and copy, movement same in vim  
+<C-a> hjkl tmux switch between pains  
+
+Vim : 
+
+"<C-n> Tab/shift_tab" : next/previous: autocomplete 
+"<C-hjkl>"            : movement between pain 
+
+"Esc :"  SrcExpl open source explore plugin
+	 Tlist open tag list which show function , variable 
+	 NERDTree  open source tree in current folder
+
+
+Vim cscope usage : 
+vi -t "function" // start open file which contain the "function"
+
+ " The following maps all invoke one of the following cscope search types:
+ "
+ "   's'   symbol: find all references to the token under cursor
+ "   'g'   global: find global definition(s) of the token under cursor
+ "   'c'   calls:  find all calls to the function name under cursor
+ "   't'   text:   find all instances of the text under cursor
+ "   'e'   egrep:  egrep search for the word under cursor
+ "   'f'   file:   open the filename under cursor
+ "   'i'   includes: find files that include the filename under cursor
+ "   'd'   called: find functions that function under cursor calls
+
+<C-\><search_types> .follow search_types above.
+
+
+
