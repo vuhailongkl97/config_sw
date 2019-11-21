@@ -27,3 +27,5 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 set background=dark
 set t_Co=256
+set ignorecase
+set pastetoggle=<F3>
