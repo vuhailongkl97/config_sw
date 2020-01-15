@@ -30,5 +30,6 @@ set t_Co=256
 
 "show full path of a file
 set statusline+=%F
+set tabstop=4
 
 
