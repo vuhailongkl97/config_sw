@@ -31,5 +31,8 @@ set ignorecase
 set pastetoggle=<F3>
 "show full path of a file
 set statusline+=%F
+
+set expandtab
 "1 tab = 4 spaces
 set tabstop=4
+set shiftwidth=4
