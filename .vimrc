@@ -29,3 +29,7 @@ set background=dark
 set t_Co=256
 set ignorecase
 set pastetoggle=<F3>
+"show full path of a file
+set statusline+=%F
+"1 tab = 4 spaces
+set tabstop=4
