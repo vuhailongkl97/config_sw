@@ -36,3 +36,4 @@ set expandtab
 "1 tab = 4 spaces
 set tabstop=4
 set shiftwidth=4
+colorscheme koehler
