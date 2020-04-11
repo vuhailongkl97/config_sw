@@ -27,10 +27,13 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 set background=dark
 set t_Co=256
-
+set ignorecase
+set pastetoggle=<F3>
 "show full path of a file
 set statusline+=%F
+set expandtab
+"1 tab = 4 spaces
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
+colorscheme koehler

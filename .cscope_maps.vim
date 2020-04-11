@@ -29,6 +29,7 @@
 if has("cscope")
 
     """"""""""""" Standard cscope/vim boilerplate
+    set nocscopeverbose
 
     " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
     set cscopetag
