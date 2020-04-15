@@ -10,10 +10,10 @@ hi Search ctermfg=white
 set hlsearch
 set colorcolumn=80
 
-set foldmethod=indent   
-set foldnestmax=10
-set nofoldenable
-set foldlevel=2
+"set foldmethod=indent
+"set foldnestmax=10
+"set nofoldenable
+"set foldlevel=2
 
 vmap <C-C> "+y
 
@@ -31,9 +31,11 @@ set ignorecase
 set pastetoggle=<F3>
 "show full path of a file
 set statusline+=%F
-set expandtab
+
+"set expandtab
 "1 tab = 4 spaces
 set tabstop=4
 set shiftwidth=4
 set expandtab
 colorscheme koehler
+filetype plugin indent on
