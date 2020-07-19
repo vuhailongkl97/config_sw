@@ -9,6 +9,7 @@ hi Search ctermbg=red
 hi Search ctermfg=white
 set hlsearch
 set colorcolumn=80
+syntax on
 
 "set foldmethod=indent
 "set foldnestmax=10
@@ -26,7 +27,7 @@ map <C-l> <C-W>l
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 set background=dark
-set t_Co=256
+set t_Co=256!
 set ignorecase
 set pastetoggle=<F3>
 "show full path of a file
@@ -39,3 +40,5 @@ set shiftwidth=4
 set expandtab
 colorscheme koehler
 filetype plugin indent on
+set relativenumber
+set mouse=a
