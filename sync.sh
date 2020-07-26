@@ -11,6 +11,7 @@ clonning()
 	cp -v .vundle.vim ~/
 	cp -v .taglist.vim ~/
 	cp -v .srcexpl.vim ~/
+	cp -v .zshrc ~/
 }
 pushing()
 {
@@ -23,6 +24,7 @@ pushing()
 	cp -v ~/.vundle.vim .
 	cp -v ~/.taglist.vim .
 	cp -v  ~/.srcexpl.vim .
+	cp -v  ~/.zshrc .
 }
 
 echo "clone from repo(c) or push to repo(p)"
