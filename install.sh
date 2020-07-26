@@ -2,6 +2,7 @@
 
 VIM_DIR=$HOME/.vim
 BASH_RC_DIR=$HOME/.bashrc
+ZSH_RC_DIR=$HOME/.zshrc
 
 echo "installing vundle plugin"
 if [ -d "$VIM_DIR/bundle/Vundle.vim" ]; then 
@@ -43,6 +44,19 @@ else
 		echo "$BASH_RC_DIR is updated"
 	else
 		echo "don't need update $BASH_RC_DIR"
+	fi
+fi
+
+if [ ! -f "$ZSH_RC_DIR" ]; then
+	echo "file $ZSH_RC_DIR is not exist"
+else
+
+	echo "checking .bashrc .... "
+	if [  -z "$TMUX_AUTO_STARTUP" ]; then
+		cat .auto_startup_tmux.conf >> $ZSH_RC_DIR
+		echo "$ZSH_RC_DIR is updated"
+	else
+		echo "don't need update $ZSH_RC_DIR"
 	fi
 fi
 
