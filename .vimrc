@@ -39,3 +39,6 @@ set shiftwidth=4
 set expandtab
 colorscheme koehler
 filetype plugin indent on
+set relativenumber
+set mouse=a
+
