@@ -40,5 +40,7 @@ set expandtab
 colorscheme koehler
 filetype plugin indent on
 set relativenumber
+set autoindent
 set mouse=a
+highlight ColorColumn ctermbg=8
 

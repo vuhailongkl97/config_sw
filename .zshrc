@@ -114,3 +114,23 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias br="git branch"
+alias gt="git diff --staged"
+
+if [ -z $TMUX ]; then
+        if tmux has -t work > /dev/null 2>&1; then
+                if [ 0 -eq `tmux lsc -t work 2>/dev/null | wc -l` ]; then
+                        echo attach
+                        tmux -2 attach -t work
+
+                else
+                        echo "create new. work window is working now "
+                        tmux -2 new
+                fi
+        else
+                echo "create new session with work window"
+                tmux -2 new -t work
+        fi
+fi
+
+export TMUX_AUTO_STARTUP=1
