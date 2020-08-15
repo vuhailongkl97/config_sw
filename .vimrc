@@ -3,7 +3,7 @@ source ~/.srcexpl.vim
 source ~/.cscope_maps.vim
 source ~/.taglist.vim
 
-
+syntax on
 set number
 hi Search ctermbg=red
 hi Search ctermfg=white
