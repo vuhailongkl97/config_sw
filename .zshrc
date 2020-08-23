@@ -10,6 +10,7 @@ source $ZSH/oh-my-zsh.sh
 bindkey -v
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=100'
 
 zstyle ':completion:*-case' menu select=5
 zstyle ':completion:*:history-words'    menu yes

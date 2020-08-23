@@ -40,32 +40,6 @@ if [ -z "$(which cscope)" ]; then
 	$INSTALL_CMD -y  cscope
 fi
 
-if [ ! -f "$BASH_RC_DIR" ]; then 
-	echo "file $BASH_RC_DIR is not exist"
-else 
-
-	echo "checking .bashrc .... "
-	if [  -z "$TMUX_AUTO_STARTUP" ]; then 
-		cat .auto_startup_tmux.conf >> $BASH_RC_DIR
-		echo "$BASH_RC_DIR is updated"
-	else
-		echo "don't need update $BASH_RC_DIR"
-	fi
-fi
-
-if [ ! -f "$ZSH_RC_DIR" ]; then
-	echo "file $ZSH_RC_DIR is not exist"
-else
-
-	echo "checking .bashrc .... "
-	if [  -z "$TMUX_AUTO_STARTUP" ]; then
-		cat .auto_startup_tmux.conf >> $ZSH_RC_DIR
-		echo "$ZSH_RC_DIR is updated"
-	else
-		echo "don't need update $ZSH_RC_DIR"
-	fi
-fi
-
 if [ ! -z "$(which zsh)" ]
 then
     echo "zsh is installed"
@@ -73,6 +47,7 @@ else
     echo "installing zsh"
     $INSTALL_CMD zsh -y
 fi
+
 if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]
 then
     echo "install autosugestions"
