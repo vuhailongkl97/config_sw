@@ -4,6 +4,12 @@ VIM_DIR=$HOME/.vim
 BASH_RC_DIR=$HOME/.bashrc
 ZSH_RC_DIR=$HOME/.zshrc
 
+printf  "enter install cmd :\n
+   ex: sudo apt-get install\n
+   ex: sudo yum install\n"
+
+read INSTALL_CMD
+
 echo "installing vundle plugin"
 if [ -d "$VIM_DIR/bundle/Vundle.vim" ]; then 
 	echo "directory is exist, you only need clone config file"
@@ -16,22 +22,22 @@ fi
 
 if [ -z "$(which xclip)" ]; then 
 	echo "installing xclip for control clipboard with tmux"
-	sudo apt-get install -y xclip
+	$INSTALL_CMD -y xclip
 fi
 
 if [ -z "$(which tmux)" ]; then 
 	echo "installing tmux  for multiplexing"
-	sudo apt-get install -y tmux 
+	$INSTALL_CMD -y tmux
 fi
 
 if [ -z "$(which ctags)" ]; then 
 	echo "installing ctags for vim' plugin"
-	sudo apt-get install -y ctags 
+	$INSTALL_CMD -y ctags
 fi
 
 if [ -z "$(which cscope)" ]; then 
 	echo "installing cscope for vim' plugin"
-	sudo apt-get install -y  cscope 
+	$INSTALL_CMD -y  cscope
 fi
 
 if [ ! -f "$BASH_RC_DIR" ]; then 
@@ -65,7 +71,22 @@ then
     echo "zsh is installed"
 else
     echo "installing zsh"
-    sudo apt-get install zsh -y
+    $INSTALL_CMD zsh -y
+fi
+if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]
+then
+    echo "install autosugestions"
+    git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+else
+    echo "plugin autosugestions is installed"
+fi
+
+if [ ! -z "$(which zsh)" ]
+then
+    echo "zsh is installed"
+else
+    echo "installing zsh"
+    $INSTALL_CMD zsh -y
 fi
 if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]
 then
