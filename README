@@ -61,5 +61,7 @@ vi -t "function" // start open file which contain the "function"
 
 <C-\><search_types> .follow search_types above.
 
-
+Zsh and auto-suggestion : cool thing.
+for auto-completed and quick history searching
+https://ohmyz.sh/
 
