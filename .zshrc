@@ -1,9 +1,9 @@
-export ZSH="/home/$USER/.oh-my-zsh"
+export ZSH=~/.oh-my-zsh
 HOME_USER="longkl"
 WORK_USER="vhlong"
 
 ZSH_THEME="kardan"
-plugins=(history-substring-search zsh-autosuggestions)
+plugins=(history-substring-search zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -11,6 +11,13 @@ bindkey -v
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=100'
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf*' 'fg=white,bold,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('git push*' 'fg=white,bold,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('git pull*' 'fg=white,bold,bg=red')
+ZSH_HIGHLIGHT_STYLES[path]=fg=214
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=063
 
 zstyle ':completion:*-case' menu select=5
 zstyle ':completion:*:history-words'    menu yes

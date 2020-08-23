@@ -48,6 +48,22 @@ else
     $INSTALL_CMD zsh -y
 fi
 
+if [ ! -z "$(which zsh)" ]
+then
+    echo "zsh is installed"
+else
+    echo "installing zsh"
+    $INSTALL_CMD zsh -y
+fi
+
+if [ ! -d ~/.oh-my-zsh ]
+then
+    echo "install oh-my-zsh"
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+    echo "plugin oh-my-zsh is installed"
+fi
+
 if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]
 then
     echo "install autosugestions"
@@ -56,20 +72,14 @@ else
     echo "plugin autosugestions is installed"
 fi
 
-if [ ! -z "$(which zsh)" ]
+if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]
 then
-    echo "zsh is installed"
+    echo "install syntax hightlighting"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 else
-    echo "installing zsh"
-    $INSTALL_CMD zsh -y
+    echo "plugin syntax highlighting is installed"
 fi
-if [ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]
-then
-    echo "install autosugestions"
-    git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-else
-    echo "plugin autosugestions is installed"
-fi
+
 
 # install all plugin in list .vundle.vim
 echo "checking plugin update ..."
