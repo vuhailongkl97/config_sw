@@ -63,5 +63,7 @@ vi -t "function" // start open file which contain the "function"
 
 Zsh and auto-suggestion : cool thing.
 for auto-completed and quick history searching
-https://ohmyz.sh/
+    https://ohmyz.sh/
 
+follow vimdiff operation:
+    https://stackoverflow.com/questions/5288875/how-to-expand-collapse-a-diff-sections-in-vimdiff
