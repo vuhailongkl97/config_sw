@@ -25,6 +25,8 @@ map <C-l> <C-W>l
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+nmap cp :let @" = expand("%:p")<cr>
+
 set background=dark
 set t_Co=256
 set ignorecase
@@ -51,3 +53,6 @@ if &diff
     highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
     highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
 endif
+
+" Make prefix , suffix character in vim are visible
+" set list

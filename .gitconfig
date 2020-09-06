@@ -1,0 +1,11 @@
+[user]
+	email = vuhailongkl97@gmail.com
+	name = longkl
+[diff]
+[difftool]
+	prompt = true
+[merge]
+	tool = vimdiff
+
+[difftool "vimdiff"]
+	cmd = "vimdiff  $LOCAL $REMOTE"
