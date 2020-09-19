@@ -56,3 +56,10 @@ endif
 
 " Make prefix , suffix character in vim are visible
 " set list
+
+"git add with F1 key
+func GitAdd()
+	silent !clear
+	execute "!git add" expand("%:p") "&&" "echo add" expand("%:p") "successfully"
+endfunction
+nnoremap <F1> :call GitAdd()<cr>
