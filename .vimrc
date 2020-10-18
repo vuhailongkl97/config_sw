@@ -59,18 +59,27 @@ endif
 
 "git add with F1 key
 func GitAdd()
-	silent !clear
-	execute "!git add" expand("%:p") "&&" "echo add" expand("%:p") "successfully"
+    silent !clear
+    execute "!git add" expand("%:p") "&&" "echo add" expand("%:p") "successfully"
 endfunction
 nnoremap <F1> :call GitAdd()<cr>
 
 "func show trailing spaces
 
+let g:showTrailingEnabled = 1
+
 func ShowTrailingSpace()
-    highlight ExtraWhitespace ctermbg=8
-    match ExtraWhitespace /\s\+$/
+    if g:showTrailingEnabled
+        highlight ExtraWhitespace ctermbg=8
+        match ExtraWhitespace /\s\+$/
+        let g:showTrailingEnabled = 0
+    else
+        match
+        let g:showTrailingEnabled = 1
+    endif
 endfunction
 
 call ShowTrailingSpace()
 
-nnoremap <F2> :set list<cr>
+nnoremap <F2> :set list!<cr>
+nnoremap <F3> :call ShowTrailingSpace()<cr>
