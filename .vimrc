@@ -63,3 +63,14 @@ func GitAdd()
 	execute "!git add" expand("%:p") "&&" "echo add" expand("%:p") "successfully"
 endfunction
 nnoremap <F1> :call GitAdd()<cr>
+
+"func show trailing spaces
+
+func ShowTrailingSpace()
+    highlight ExtraWhitespace ctermbg=8
+    match ExtraWhitespace /\s\+$/
+endfunction
+
+call ShowTrailingSpace()
+
+nnoremap <F2> :set list<cr>
