@@ -11,10 +11,10 @@ printf  "enter install cmd :\n
 read INSTALL_CMD
 
 echo "installing vundle plugin"
-if [ -d "$VIM_DIR/bundle/Vundle.vim" ]; then 
+if [ -d "$VIM_DIR/bundle/Vundle.vim" ]; then
 	echo "directory is exist, you only need clone config file"
 	./sync.sh
-else 
+else
 	echo "create dir"
 	mkdir -p $VIM_DIR/bundle/
 	git clone https://github.com/VundleVim/Vundle.vim.git $VIM_DIR/bundle/Vundle.vim
@@ -80,6 +80,14 @@ else
     echo "plugin syntax highlighting is installed"
 fi
 
+if [ ! -d ~/.fzf ]
+then
+    echo "installing fzf"
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+else
+    echo "plugin fzf installed"
+fi
 
 # install all plugin in list .vundle.vim
 echo "checking plugin update ..."

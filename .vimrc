@@ -3,6 +3,8 @@ source ~/.srcexpl.vim
 source ~/.cscope_maps.vim
 source ~/.taglist.vim
 
+set rtp+=~/.fzf
+
 syntax on
 set number
 hi Search ctermbg=red
@@ -83,3 +85,5 @@ call ShowTrailingSpace()
 
 nnoremap <F2> :set list!<cr>
 nnoremap <F3> :call ShowTrailingSpace()<cr>
+
+let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
