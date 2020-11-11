@@ -87,3 +87,7 @@ nnoremap <F2> :set list!<cr>
 nnoremap <F3> :call ShowTrailingSpace()<cr>
 
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
+" for highlighting cursor line
+color desert
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
