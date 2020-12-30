@@ -2,7 +2,7 @@ export ZSH=~/.oh-my-zsh
 HOME_USER="longkl"
 WORK_USER="vhlong"
 
-ZSH_THEME="kardan"
+ZSH_THEME="rkj-repos"
 plugins=(history-substring-search zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
