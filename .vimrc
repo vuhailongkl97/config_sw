@@ -10,6 +10,7 @@ set number
 hi Search ctermbg=red
 hi Search ctermfg=white
 set hlsearch
+set incsearch
 set colorcolumn=80
 
 "set foldmethod=indent
