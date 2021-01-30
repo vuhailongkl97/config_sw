@@ -47,7 +47,6 @@ filetype plugin indent on
 set relativenumber
 set autoindent
 set mouse=a
-highlight ColorColumn ctermbg=8
 
 if &diff
     colorscheme evening
@@ -92,3 +91,4 @@ let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 color desert
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
+hi ColorColumn ctermbg=grey
