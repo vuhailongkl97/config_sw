@@ -9,3 +9,5 @@
 
 [difftool "vimdiff"]
 	cmd = "vimdiff  $LOCAL $REMOTE"
+[oh-my-zsh]
+	hide-status = 1
